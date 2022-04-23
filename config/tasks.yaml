@@ -1,0 +1,21 @@
+vmop:
+  visual_memory_early_fusion: True
+  visual_memory_only_predict: True
+  visual_memory_embs_name: glove_embs.npy
+  scope_name_format: [
+    "vmop_share{:d}_{}_attr{}", 
+    [visual_memory_share_embs, visual_memory_key_type, visual_memory_attr_topk]
+  ]
+  crit: [lang, attribute]
+  crit_name: [Cap_Loss, Attr_Loss]
+  crit_scale: [1.0, 1.0]
+  # attr_crit: none_sum
+
+# vm:
+#   visual_memory_early_fusion: True
+#   visual_memory_only_predict: False
+#   visual_memory_embs_name: glove_embs.npy
+#   scope_name_format: [
+#     "vmop_share{:d}_{}_{}_attr{}", 
+#     [visual_memory_share_embs, visual_memory_key_type, visual_memory_value_type, visual_memory_attr_topk]
+#   ]

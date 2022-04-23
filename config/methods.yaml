@@ -1,0 +1,46 @@
+ARB:
+  encoder: Encoder_HighWay
+  decoder: BertDecoder
+  decoding_type: ARFormer
+  fusion: temporal_concat
+  visual_word_generation: False
+
+ParAhLSTMat:
+  encoder: Encoder_preLN
+  decoder: ParAAdjustedAttentionRNNDecoder
+  cls_head: MLPHead
+  decoding_type: ARFormer
+  fusion: temporal_concat
+
+TopDown:
+  encoder: Encoder_preLN
+  decoder: TopDownAttentionRNNDecoder
+  fusion: temporal_concat
+
+
+# Curriculum Learning
+TopDown_CL:
+  encoder: Encoder_preLN
+  decoder: TopDownAttentionRNNDecoder
+  fusion: temporal_concat
+  num_workers: 4
+  lr_decay: 1
+  sample_fully_t: 15
+
+ParAhLSTMat_CL:
+  encoder: Encoder_preLN
+  decoder: ParAAdjustedAttentionRNNDecoder
+  cls_head: MLPHead
+  decoding_type: ARFormer
+  fusion: temporal_concat
+  lr_decay: 1
+  sample_fully_t: 15
+
+ARB_CL:
+  encoder: Encoder_HighWay
+  decoder: BertDecoder
+  decoding_type: ARFormer
+  fusion: temporal_concat
+  visual_word_generation: False
+  lr_decay: 1
+  sample_fully_t: 15

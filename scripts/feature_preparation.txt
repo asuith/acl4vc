@@ -1,0 +1,69 @@
+# repo `NACF-pl`
+python pretreatment/extract_frames_from_videos.py --video_path ~/new_VC_data/MSVD/all_videos/ --frame_path ~/new_VC_data/MSVD/all_frames --strategy 0 --video_suffix avi
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSVD/all_frames/ --feat_path ~/new_VC_data/MSVD/feats --feat_name image_IRv2_fixed60.hdf5 --model inceptionresnetv2 --k 60 && \
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSVD/all_frames/ --feat_path ~/new_VC_data/MSVD/feats --feat_name image_R152_fixed60.hdf5 --model resnet152 --k 60 && \
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSVD/all_frames/ --feat_path ~/new_VC_data/MSVD/feats --feat_name image_R101_fixed60.hdf5 --model resnet101 --k 60
+
+
+# repo `video-classification-3d-cnn`
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/MSVD/all_frames/ \
+--feats_dir ~/new_VC_data/MSVD/feats/ \
+--n_frames 60
+
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/MSVD/all_frames/ \
+--feats_dir ~/new_VC_data/MSVD/feats/
+
+
+
+
+
+# repo `NACF-pl`
+python pretreatment/extract_frames_from_videos.py --video_path ~/new_VC_data/MSRVTT/all_videos/ --frame_path ~/new_VC_data/MSRVTT/all_frames --strategy 0 --video_suffix mp4
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSRVTT/all_frames/ --feat_path ~/new_VC_data/MSRVTT/feats --feat_name image_IRv2_fixed60.hdf5 --model inceptionresnetv2 --k 60
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSRVTT/all_frames/ --feat_path ~/new_VC_data/MSRVTT/feats --feat_name image_R152_fixed60.hdf5 --model resnet152 --k 60 && \
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/MSRVTT/all_frames/ --feat_path ~/new_VC_data/MSRVTT/feats --feat_name image_R101_fixed60.hdf5 --model resnet101 --k 60
+
+# repo `video-classification-3d-cnn`
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/MSRVTT/all_frames/ \
+--feats_dir ~/new_VC_data/MSRVTT/feats/ \
+--n_frames 60 --limit 10000
+
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/MSRVTT/all_frames/ \
+--feats_dir ~/new_VC_data/MSRVTT/feats/ \
+--limit 10000
+
+
+
+
+
+# repo `NACF-pl`
+python pretreatment/extract_frames_from_videos.py --video_path ~/new_VC_data/VATEX/all_videos/ --frame_path ~/new_VC_data/VATEX/all_frames --strategy 0 --video_suffix mp4
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/VATEX/all_frames/ --feat_path ~/new_VC_data/VATEX/feats --feat_name image_IRv2_fixed60.hdf5 --model inceptionresnetv2 --k 60
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/VATEX/all_frames/ --feat_path ~/new_VC_data/VATEX/feats --feat_name image_R152_fixed60.hdf5 --model resnet152 --k 60 && \
+python pretreatment/extract_image_feats_from_frames.py --frame_path ~/new_VC_data/VATEX/all_frames/ --feat_path ~/new_VC_data/VATEX/feats --feat_name image_R101_fixed60.hdf5 --model resnet101 --k 60
+
+# repo `video-classification-3d-cnn`
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/VATEX/all_frames/ \
+--feats_dir ~/new_VC_data/VATEX/feats/ \
+--n_frames 60
+
+python main.py \
+--gpu 0 \
+--model "VideoCaptioning/resnext-101-kinetics.pth" \
+--video_root ~/new_VC_data/VATEX/all_frames/ \
+--feats_dir ~/new_VC_data/VATEX/feats/

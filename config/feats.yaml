@@ -1,0 +1,6 @@
+MI:
+  feats_a_name: []
+  feats_m_name: [motion_resnext101_kinetics_fixed60.hdf5]
+  feats_i_name: [image_IRv2_fixed60.hdf5]
+  dim_m: 2048
+  dim_i: 1536
