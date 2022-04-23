@@ -82,9 +82,14 @@ python train.py --default --dataset `dataset_name` --method `method_name`
 
 # For example:
 
-CUDA_VISIBLE_DEVICES=0 python train.py --save_csv --dataset MSVD --method ParAhLSTMat_CL --sample_method metric --difficulty_type video-rarity --scope me02-v2-metric --slide --slide_type middleExpand --start_mid 0.2
+CUDA_VISIBLE_DEVICES=0 python train.py --save_csv --dataset MSVD \
+    --method ParAhLSTMat_CL --sample_method metric \
+    --difficulty_type video-rarity --slide \
+    --slide_type middleExpand --start_mid 0.2 \
+    --scope me02-v2-metric
 
-CUDA_VISIBLE_DEVICES=0 python train.py --default --dataset MSRVTT --method ARB
+CUDA_VISIBLE_DEVICES=0 python train.py --dataset MSRVTT \
+    --method ARB --scope baseline
 ```
 
 Checkout `opts.py` for the more arguments.
@@ -98,9 +103,11 @@ CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test -cp `actual model
 
 # For example:
 
-CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test -cp experiments/MSRVTT/ARB_CL/acl/best.ckpt --save_csv
+CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test \
+    -cp experiments/MSRVTT/ARB_CL/acl/best.ckpt --save_csv
 
-CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test -cp ../ACL4VC/model_weights/MSRVTT/ARB_CL/acl/best.ckpt --save_csv
+CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test \
+    -cp ../ACL4VC/model_weights/MSRVTT/ARB_CL/acl/best.ckpt --save_csv
 ```
 
 ## Acknowledgements
