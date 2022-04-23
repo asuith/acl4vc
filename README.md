@@ -1,6 +1,6 @@
 # acl4vc
 
-PyTorch code for manuscript *Adaptive Curriculum Learning for Video Captioning*.
+PyTorch code for manuscript [*Adaptive Curriculum Learning for Video Captioning*](https://ieeexplore.ieee.org/document/9737531).
 
 ## Install
 
@@ -110,5 +110,24 @@ CUDA_VISIBLE_DEVICES=0 python translate.py -gpus 1 --mode test \
     -cp ../ACL4VC/model_weights/MSRVTT/ARB_CL/acl/best.ckpt --save_csv
 ```
 
-## Acknowledgements
+## Acknowledgement
 The code is modified from repo [yangbang18/Non-Autoregressive-Video-Captioning](https://github.com/yangbang18/Non-Autoregressive-Video-Captioning). Many thanks!
+
+## Bibtex
+
+Please consider citing our work if you find it helpful:
+
+```
+@article{DBLP:journals/access/LiYZ22,
+  author    = {Shanhao Li and
+               Bang Yang and
+               Yuexian Zou},
+  title     = {Adaptive Curriculum Learning for Video Captioning},
+  journal   = {{IEEE} Access},
+  volume    = {10},
+  pages     = {31751--31759},
+  year      = {2022},
+  url       = {https://doi.org/10.1109/ACCESS.2022.3160451},
+  doi       = {10.1109/ACCESS.2022.3160451},
+}
+```
