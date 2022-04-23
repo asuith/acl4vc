@@ -50,7 +50,7 @@ It should be placed in somewhere to your liking (assume the folder is named `bas
 **Please remember to modify `base_data_path` in [config/Constants.py](config/Constants.py) to the actual directory**
 
 
-### Pretrained Models (optinal)
+#### Pretrained Models (optional)
 
 We have provided the model weights trained on MSVD or MSRVTT. Download from the above link and extract to the `experiments` folder.
 
