@@ -18,10 +18,11 @@ pip install pytorch-lightning==1.3.4 torchmetrics==0.6.0
 git clone https://github.com/asuith/acl4vc
 ```
 
-The main code for ideas behind our manuscript is `Sampler` Class and `get_idx_by_sorted_difficulty` function inside `misc/utils.py``' 
+The main code for ideas behind our manuscript is `Sampler` Class and `get_idx_by_sorted_difficulty` function 
+`misc/utils.py``' 
 ### Download
 
-Here is the [OneDrive share (inside ACL4VC folder)](https://1drv.ms/u/s!ApDoTkmqHk3FiI1vaODLLO_v4nGwlQ?e=8euyfv) for the video-caption data feature and pretrained model weights, which are explained in the following.
+Here is the [OneDrive share](https://1drv.ms/u/s!ApDoTkmqHk3FiI1vaODLLO_v4nGwlQ?e=8euyfv) for the video-caption data feature and pretrained model weights, which are explained in the following.
 
 #### Data
 
